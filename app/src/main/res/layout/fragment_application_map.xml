@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/application_map_fragment_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ApplicationMapFragment">
+
+    <fragment
+        android:id="@+id/supportMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <Button
+        android:id="@+id/showDiscussionsForCurrentAreaButton"
+        android:layout_width="210dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginStart="16dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="9dp"
+        android:text="Показати для ціеї місцевості"
+        android:textSize="13sp"
+        android:textColor="@color/colorGreen"
+        android:fontFamily="@font/sfui_display_medium"
+        android:textAllCaps="false"
+        android:background="@drawable/map_button_background"/>
+
+    <Button
+        android:id="@+id/myLocationButton"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="end"
+        android:background="@drawable/ic_map_current_location"
+        android:shadowColor="@android:color/transparent"
+        android:elevation="0dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</FrameLayout>

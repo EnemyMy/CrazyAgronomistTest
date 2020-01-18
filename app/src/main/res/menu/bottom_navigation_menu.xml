@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_item_all_requests"
+        android:title="Всі заявки"
+        android:icon="@drawable/ic_tabbar_all_requests_default"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_item_my_requests"
+        android:title="Експерти"
+        android:icon="@drawable/ic_tabbar_my_requests_default"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_item_empty"
+        android:title="" />
+
+    <item
+        android:id="@+id/menu_item_my_product_list"
+        android:title="Мої заявки"
+        android:icon="@drawable/ic_tabbar_my_product_list_default"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_item_favorites"
+        android:title="Обране"
+        android:icon="@drawable/ic_tabbar_favorites_default"
+        app:showAsAction="always"/>
+</menu>

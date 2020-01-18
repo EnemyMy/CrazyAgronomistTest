@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:elevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:id="@+id/recycler_item_icon"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:background="#d9d9d9"
+            android:gravity="center"
+            android:text="Ж"
+            android:textColor="#808080"
+            android:textSize="24sp"
+            android:fontFamily="@font/sfui_display_ultralight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/recycler_item_creator_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text="Ігор Журавльов"
+            android:textColor="@color/colorGreen"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sfui_display_bold"
+            app:layout_constraintStart_toEndOf="@+id/recycler_item_icon"
+            app:layout_constraintTop_toTopOf="@+id/recycler_item_icon" />
+
+        <ToggleButton
+            android:id="@+id/favButton"
+            android:layout_width="22dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:background="@drawable/favorite_button_background"
+            android:textOff=""
+            android:textOn=""
+            android:elevation="0dp"
+            android:shadowColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recycler_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text="4 години тому"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:fontFamily="@font/sfui_display_regular"
+            app:layout_constraintStart_toEndOf="@+id/recycler_item_icon"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_creator_name" />
+
+        <ImageView
+            android:id="@+id/recycler_item_geotag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_newsfeed_geotag"
+            app:layout_constraintStart_toStartOf="@+id/recycler_item_icon"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_icon" />
+
+        <TextView
+            android:id="@+id/recycler_item_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/ubuntu"
+            android:text="Чернігівська область, Городнянський район"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/recycler_item_geotag"
+            app:layout_constraintTop_toTopOf="@+id/recycler_item_geotag" />
+
+        <TextView
+            android:id="@+id/recycler_item_culture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="#кукурудза"
+            android:textColor="#404040"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sfui_display_semibold"
+            app:layout_constraintStart_toStartOf="@+id/recycler_item_geotag"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_address" />
+
+        <TextView
+            android:id="@+id/recycler_item_problem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="19dp"
+            android:text="#бур'яни"
+            android:textColor="#404040"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sfui_display_semibold"
+            app:layout_constraintStart_toEndOf="@+id/recycler_item_culture"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_address" />
+
+        <TextView
+            android:id="@+id/recycler_item_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Оце така халепа повилазила буквально за два дні. Чим травить, бо геть забиває паростки"
+            android:textColor="#404040"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/sfui_display_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/recycler_item_culture"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_culture" />
+
+        <ImageView
+            android:id="@+id/recycler_item_image1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="5dp"
+            android:background="#d9d9d9"
+            app:layout_constraintDimensionRatio="w,1:1.29"
+            app:layout_constraintEnd_toStartOf="@+id/recycler_item_image2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="@+id/recycler_item_description"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_description" />
+
+        <ImageView
+            android:id="@+id/recycler_item_image2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="2dp"
+            android:background="#d9d9d9"
+            app:layout_constraintDimensionRatio="w,1:1.304"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/recycler_item_image1"
+            app:layout_constraintTop_toTopOf="@+id/recycler_item_image1" />
+
+        <ImageView
+            android:id="@+id/recycler_item_image3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="1.9dp"
+            android:background="#d9d9d9"
+            app:layout_constraintBottom_toBottomOf="@+id/recycler_item_image1"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_item_image2"
+            app:layout_constraintStart_toEndOf="@+id/recycler_item_image1"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_image2" />
+
+        <View
+            android:id="@+id/recycler_item_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:background="#e5e5e5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_image1" />
+
+        <ImageView
+            android:id="@+id/recycler_item_views_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_newsfeed_postbar_views"
+            app:layout_constraintStart_toStartOf="@+id/recycler_item_image1"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_divider" />
+
+        <ImageView
+            android:id="@+id/recycler_item_comments_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="7.2dp"
+            android:layout_marginBottom="8.2dp"
+            android:src="@drawable/ic_newsfeed_postbar_comments"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/recycler_item_comments_count"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_divider" />
+
+        <TextView
+            android:id="@+id/recycler_item_comments_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="2"
+            android:textColor="#999999"
+            android:textSize="13sp"
+            android:fontFamily="@font/sfui_display_regular"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_item_divider"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_item_divider" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="503dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

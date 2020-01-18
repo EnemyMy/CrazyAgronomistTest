@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll"
+            android:gravity="center"
+            android:background="@drawable/toolbar_background"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="68dp"
+        android:elevation="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layoutDirection="rtl"
+        android:background="@drawable/tab_layout_background"
+        app:tabSelectedTextColor="@android:color/white"
+        app:tabIndicatorHeight="0dp"
+        app:tabRippleColor="@null"
+        app:tabTextAppearance="@style/TabTextAppearance"/>
+
+    <com.example.app_22_testmapviewpager2.main.NonSwipeableViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="115dp"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="false"
+        app:fabAlignmentMode="center" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_menu"
+            android:theme="@style/Widget.BottomNavigationView"/>
+
+    </FrameLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="60dp"
+        android:scaleType="center"
+        app:maxImageSize="35dp"
+        android:layout_gravity="bottom|center"
+        app:layout_anchor="@id/bottom_bar"
+        android:backgroundTint="@android:color/white"
+        app:backgroundTint="@color/tabBlue"
+        android:src="@drawable/ic_tabbar_new_request_default"
+        app:borderWidth="1dp"
+        app:elevation="0dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

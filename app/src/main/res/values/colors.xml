@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#C2C2C2</color>
+    <color name="colorAccent">#007AFF</color>
+    <color name="tabBlue">#007AFF</color>
+    <color name="toolbarColor">#e6fafafa</color>
+    <color name="colorGreen">#00952f</color>
+</resources>

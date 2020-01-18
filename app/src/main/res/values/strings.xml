@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">App_22_TestMapViewPager2</string>
+    <string name="tab_text_1">Стрічка</string>
+    <string name="tab_text_2">Карта</string>
+    <string name="map_api_key" translatable="false">AIzaSyC6gwUT3dHpjiJ-J_JzKsLYQrjs974CweM</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
